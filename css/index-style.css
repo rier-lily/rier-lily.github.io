@@ -29,6 +29,16 @@ h2{
   line-height: 1px;
 }
 
-.logo{
-    padding-top: 2.8rem;
+/* .logo{
+    
+} */
+
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2.8rem;
 }
+
+/* .site-preview{
+  max-wdith
+} */
