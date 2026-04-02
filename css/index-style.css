@@ -1,11 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Michroma&display=swap');
 
+@media (prefers-color-scheme: light){
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+    --bg: var(--white);
+    --txt: var(--black);
+}
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --white: #000000;
+    --black: #ffffff;
+    --bg: var(--white);
+    --txt: var(--black);
+}
+}
+/* body:has(.checkbox:checked) {
+  --txt: var(--white);
+  --bg: var(--black);
+} */
+
+
 a{
   text-decoration: none;
 }
 
 body{
-  background-color: #fff;
+  background-color: var(--bg);
 }
 
 main {
@@ -29,7 +52,7 @@ h1{
   font-variation-settings: "wdth" 125;
   font-size: 6rem;
   line-height: 1px;
-  color:#000;
+  color: var(--txt);
 }
 
 h2{
@@ -39,17 +62,18 @@ h2{
   font-variation-settings: "wdth" 125;
   font-size: 3rem;
   line-height: 1px;
-  color:#000;
+  color: var(--txt);
 }
 
 h3{
-  color: #000;
+  color: var(--txt);
   font-family: Michroma;
   font-size: 1.3rem;
   letter-spacing: 30%;
   font-weight: 400;
 }
 
+@media (prefers-color-scheme: light){
 .logo-light-mode{
   display: block;
 }
@@ -57,9 +81,20 @@ h3{
 .logo-dark-mode{
   display: none;
 }
+}
+
+@media (prefers-color-scheme: dark){
+.logo-light-mode{
+  display: none;
+}
+
+.logo-dark-mode{
+  display: block;
+}
+}
 
 .project-name{
-  color: #000;
+  color: var(--txt);
   font-family: Michroma;
   font-size: 1.3rem;
   font-weight: 400;
@@ -67,9 +102,17 @@ h3{
   padding-bottom: .8rem;
 }
 
-.sticky{
+.menu{
+  height: calc(100vh - 5.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: sticky;
   top: 2.8rem;
+}
+
+.checkbox{
+  margin-right: auto;
 }
 
 .site-preview{
@@ -80,37 +123,65 @@ h3{
 }
 
 .visit, .visit:link, .visit:visited{
-  color: #000;
+  color: var(--txt);
   width: fit-content;
   font-size: 1.3rem;
   font-weight: 400;
   font-family: Michroma;
   padding: 11px 25px;
   border-radius: 25.5px;
-  border: 2px solid #000;
+  border: 2px solid var(--txt);
   transition: all .25s;
 }
 
 .visit:hover, .visit:active{
-  color: #fff;
-  background-color: #000;
+  color: var(--bg);
+  background-color: var(--txt);
 }
 
 hr {
   border: 0;
   height: 2px;
-  background: #000;
+  background: var(--txt);
   margin: 1rem 0 0 0;
   width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
+body.dark-mode {
+    --txt: var(--white);
+    --bg: var(--black);
+}
+
+@media (prefers-color-scheme: light){
+  
+  body.dark-mode .logo-dark-mode{
+    display: block;
+  }
+
+  body.dark-mode .logo-light-mode{
+    display: none;
+}
+}
+
+@media (prefers-color-scheme: dark){
+  
+  body.dark-mode .logo-dark-mode{
+    display: none;
+  }
+
+  body.dark-mode .logo-light-mode{
+    display: block;
+}
+}
+
+
+/* @media (prefers-color-scheme: dark) {
   body{
-    background-color: #000;
+    background-color: var(--txt);
   }
 
   h1, h2, h3, .project-name{
-    color: #fff;
+    color: var(--bg);
   }
 
   .logo-light-mode{
@@ -122,16 +193,21 @@ hr {
   }
 
   .visit, .visit:link, .visit:visited{
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--bg);
+    border: 2px solid var(--bg);
   }
 
   .visit:hover, .visit:active{
     color: #000;
-    background-color: #fff;
+    background-color: var(--bg);
   }
 
   hr {
-    background: #fff;
+    background: var(--bg);
   }
-}
+} */
+
+/* .checkbox:checked ~ .all{
+  --txt: var(--white);
+  --bg: var(--black);
+} */
