@@ -1,8 +1,29 @@
 
 // name your Tamagochi
+let myString = "some text"
+let num = 5
+let myBool = true
+let myArray = ['red', 'yellow', 'green']
+let myObj = {color='red', shape:'square', size: '300px'}
 
+function myPizza(sauce, toppings, crust) {
+  return {
+    mySauce: sauce,
+    myToppings: toppings,
+    myCrust: crust
+  }
+}
 
-// document.getElementById("name").innerHTML = localStorage.getItem("name");
+myPizza('pesto', ['roasted bell pepper', 'spinach'], 'thin crust')
+
+$('#setNameBtn').click(
+  function () {
+    let petName = $('#nameField').val()
+    console.log(petName)
+    $('#displayName').html(petName)
+  }
+)
+
 
 //If there is no name, display #start
 //if there is a name, display #care
