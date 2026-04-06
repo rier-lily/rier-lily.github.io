@@ -18,6 +18,10 @@
   }
 }
 
+* {
+  transition: all .25s;
+}
+
 a{
   text-decoration: none;
 }
@@ -126,7 +130,6 @@ h3{
   padding: 11px 25px;
   border-radius: 25.5px;
   border: 2px solid var(--txt);
-  transition: all .25s;
 }
 
 .visit:hover, .visit:active{
@@ -178,12 +181,30 @@ body.dark-mode {
 
 input[type="checkbox"] {
   appearance: none;
-  padding: 1.59375rem 2.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 5.625rem;
+  height: 3.1875rem;
   border-radius: 25.5px;
   border: 2px solid var(--txt);
-  transition: all .25s;
   margin: 0;
 }
+
+input[type="checkbox"]::after {
+  content: "";
+  margin-left: 5px;
+  width: calc(3.1875rem - 10px);
+  height: calc(3.1875rem - 10px);
+  background-color: var(--txt);
+  border-radius: 50%;
+  transition: all .25s;
+}
+
+input[type="checkbox"]:checked::after {
+  margin-left: calc(3.1875rem - 10px);
+}
+
 
 h4{
   margin: 0;
