@@ -145,31 +145,31 @@ hr {
   width: 100%;
 }
 
-body.dark-mode {
+.dark-mode {
     --txt: var(--white);
     --bg: var(--black);
 }
 
 @media (prefers-color-scheme: light){
   
-  body.dark-mode .logo-dark-mode{
+  .dark-mode .logo-dark-mode{
     display: block;
   }
 
-  body.dark-mode .logo-light-mode{
+  .dark-mode .logo-light-mode{
     display: none;
 }
 }
 
 @media (prefers-color-scheme: dark){
   
-  body.dark-mode .logo-dark-mode{
+  .dark-mode .logo-dark-mode{
     display: none;
   }
 
-  body.dark-mode .logo-light-mode{
+  .dark-mode .logo-light-mode{
     display: block;
-}
+  }
 }
 
 .switch{
