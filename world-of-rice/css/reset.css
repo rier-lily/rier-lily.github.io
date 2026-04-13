@@ -1,0 +1,58 @@
+/* Remove default spacing & sizing on all elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* this includes padding & border in total size */
+}
+
+
+/* Makes images, videos, & (inline) SVGs responsive by default. Reduces "overflow instances" */
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; /* removes empty space below images, keeps imgs as (default) inline element */ 
+  /* display: block; */
+}
+
+
+/* Anchor link reset. Inherits link color from parent. */
+
+a, a:link, a:visited {
+  color: inherit;
+}
+
+
+/* Ensures that background-images & gradients display fully on a short page */
+
+body {
+  min-height: 100vh;     
+  min-height: 100svh;  /* "small viewport height" for mobile browsers */
+}
+
+
+/* Sets a base font and smooth rendering, does NOT restrict "rem" user adjustments  */
+
+html {
+  font-size: 16px; /* default browser font size */
+  -webkit-text-size-adjust: 100%; /* prevent iOS zoom on rotation */
+}
+
+
+/* Inherit font for form elements */
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+
+/* Removes default border on (Project 2 / JavaScript) buttons, ensures "pointer" cursor on hover */
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}

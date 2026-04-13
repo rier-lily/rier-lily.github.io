@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-width: 950px;
+}
+
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #111818;
+}
+
+  svg {
+    position: absolute;
+    left: 32px;
+    top: 26px;
+  }
+  
+  
+  .nav-bar {
+    display: flex; 
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    background-color: #253131;
+    border-radius: 2.187rem;
+    position: relative;
+    top: 1rem;
+  }
+  
+   .l-end, .l-end:link, .l-end:visited{
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: .6875em 2.187em;
+    border: solid transparent;
+    transition: 300ms all;
+    color: #72FFAA;
+  }
+    
+  .middle, .middle:link, .middle:visited {
+    font-size: 1.25rem;
+    color: #72FFAA;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: #253131;
+    padding: .6875em 2.187em;
+    border: solid transparent;
+    transition: 300ms all;
+  }
+  
+  .r-end, .r-end:link, .r-end:visited{
+    border-radius: 0em 2.187em 2.187em 0em;
+    font-size: 1.25rem;
+    color: #72FFAA;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: #253131;
+    padding: .6875em 2.187em;
+    border: solid transparent;
+    transition: 300ms all;
+  }
+  
+  .baiao-de-dois-bar, .baiao-de-dois-bar:link, .baiao-de-dois-bar:visited {
+    color: #253131;
+    border-radius: 2.187em;
+    font-weight: 400;
+    background-color: #72FFAA;
+  }
+  
+  .bar-element:hover, .bar-element:active {
+    color: #253131;
+    border-radius: 2.187em;
+    background-color: #72FFAA;
+  }
+  
+  main {
+    color: #72D5FF;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 1.6875rem;
+    padding: 27px 27px 27px 27px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .card-container div {
+    flex: 1 1 calc(50% - 2rem);
+  }
+  
+  h1 {
+    font-weight: 800;
+    font-size: clamp(4rem, 0rem + 6.6667vw, 7rem);
+  }
+  
+  ul {
+    list-style: none;
+    font-weight: 200;
+    font-size: clamp(2rem, 1rem + 1.6667vw, 3rem);
+  }
+  
+  ul span {
+    font-weight: 700;
+  }
+  
+  p {
+    font-weight: 200;
+    font-size: clamp(1.5rem, 0rem + 1.6667vw, 2rem);
+    margin-top: 40px;
+    text-align: justify;
+  }
+  
+  .photo {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .map {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .dish {
+    object-fit: cover;
+    max-height: 486px;
+  }
+  
+  .home, .home:link, .home:visited {
+    fill: #72FFAA;
+    transition: 300ms all;
+  }
+  
+  .home:hover, .home:active {
+    fill: #72D5FF;
+  }
+  
+  
+  @media (max-width: 70rem) {
+  .card-container {
+    flex-direction: column;
+    /*flex: 1 1 100%;*/
+  }
+  }
+  
