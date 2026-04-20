@@ -41,3 +41,13 @@ document.addEventListener('DOMContentLoaded', event => {
     },
   });
 });
+
+gsap.to(".your-element", {
+  filter: "hue-rotate(180deg)",
+  scrollTrigger: {
+    trigger: "#side2",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true // Links the hue rotation directly to the scrollbar position
+  }
+});

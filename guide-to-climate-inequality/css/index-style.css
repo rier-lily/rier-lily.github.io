@@ -3,7 +3,6 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: lightskyblue;
 }
 
 section {
@@ -14,14 +13,23 @@ section {
     align-items: center;
 }
 
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -9;
+}
+
 #side1 {
-    width: 300vw;
-    display: flex;
+  width: 300vw;
+  display: flex;
 }
 
 #side2 {
-    width: 200vw;
-    display: flex;
+  width: 200vw;
+  display: flex;
 }
 
 #side3 {
@@ -50,7 +58,26 @@ body::-webkit-scrollbar {
   display: block;
 }
 
+#title{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "title-left title-right";
+  grid-template-columns: 7fr 5fr;
+}
+
+.title-left{
+  align-self: end;
+  margin:0 0 60px 153px;
+  display: flex;
+  flex-direction: column;
+  height: 532px;
+  justify-content: space-between;
+}
+
 #title-text {
+  margin: 0;
   color: #FFF;
   font-family: Indivisible;
   font-size: 6rem;
@@ -61,6 +88,8 @@ body::-webkit-scrollbar {
 }
 
 #start{
+  margin: 0;
+  padding-top: 13px;
   color: #FFF;
   font-family: Indivisible;
   font-size: 2.5rem;
@@ -70,6 +99,7 @@ body::-webkit-scrollbar {
 }
 
 .drop-up {
+  align-items: flex-end;
   width: fit-content;
   color: #FFF;
   font-family: Indivisible;
@@ -80,12 +110,27 @@ body::-webkit-scrollbar {
 }
 
 .active {
-  display: none;
   position: relative;
+  top: 20%;
+  opacity: 0;
+  transition: all .25s;
+}
+
+ul{
+  margin: 10px 0 10px 0;
 }
 
 .drop-up:hover .active {
+  top: 0;
+  opacity: 1;
+}
+
+.flower{
+  width: 347.209px;
+  height: 671px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .chapter-number{
