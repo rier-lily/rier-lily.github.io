@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', event => {
   const sections2 = gsap.utils.toArray('#side2 section');
   const sections3 = gsap.utils.toArray('#side3 section');
 
-  // Horizontal Scroll 1
   const scroll1 = gsap.to(sections1, {
     xPercent: -100 * (sections1.length - 1),
     ease: 'none',
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', event => {
     },
   });
 
-  // Horizontal Scroll 2
   gsap.to(sections2, {
     xPercent: -100 * (sections2.length - 1),
     ease: 'none',
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', event => {
     },
   });
 
-  // Horizontal Scroll 3
   const scroll3 = gsap.to(sections3, {
     xPercent: -100 * (sections3.length - 1),
     ease: 'none',
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', event => {
     },
   });
 
-  // Hue rotation tied to vertical scroll
   gsap.to(".bg-img", {
     filter: "hue-rotate(0deg)",
     scrollTrigger: {
@@ -62,7 +58,6 @@ document.addEventListener('DOMContentLoaded', event => {
     }
   });
 
-  // Hue rotation tied to horizontal scroll 3
   gsap.to(".bg-img", {
     filter: "hue-rotate(-207deg)",
     scrollTrigger: {
@@ -83,3 +78,19 @@ document.addEventListener('DOMContentLoaded', event => {
     }
   });
 });
+
+$(window).mousemove(function(e) {
+  parallaxIt(e, ".slide", -100);
+  parallaxIt(e, ".lower-bg", -30);
+});
+
+function parallaxIt(e, target, movement) {
+  var $this = $("#container");
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 1, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement
+  });
+}

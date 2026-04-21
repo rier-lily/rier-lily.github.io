@@ -13,16 +13,31 @@ section {
     align-items: center;
 }
 
-.bg-img {
+.lower-bg{
+  filter: brightness(75%);
+  filter: contrast(115%);
+}
+
+#container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
   height: 100vh;
-  z-index: -9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   filter: hue-rotate(-74deg);
   transition: all .5s;
+  z-index: -1;
 }
+
+.slide {
+  display: block;
+  position: absolute;
+  mix-blend-mode: hard-light;
+  transform: rotate(180deg);
+  filter: brightness(75%);
+}
+
 
 #side1 {
   width: 300vw;
