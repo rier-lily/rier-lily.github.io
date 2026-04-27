@@ -3,6 +3,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -202,5 +203,115 @@ p{
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
+  line-height: 118%;
+}
+
+#c1-p1 {
+  display: grid; 
+  height: 100vh;
+  grid-template-columns: 2fr 1fr 1fr; 
+  grid-template-rows: 2fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "c1-p1-left c1-p1-mtm c1-p1-right"
+    "c1-p1-left c1-p1-mb c1-p1-mb";
+  border: solid red 2px;
+}
+
+.c1-p1-left{
+  display: flex;
+  flex-direction: column;
+  grid-area: c1-p1-left;
+  justify-content: space-evenly;
+}
+
+.c1-p1-mtm{
+  grid-area: c1-p1-mtm;
+}
+
+.c1-p1-right{
+  grid-area: c1-p1-right;
+}
+
+.c1-p1-mb{
+  margin: 0 46px 0 46px;
+  grid-area: c1-p1-mb;
+  display: flex;
+  flex-direction: row;
+  border: solid red 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c1-p1-left p{
+  justify-content: end;
+  margin-left: 60px;
+}
+
+.top-boat{
+  position: relative;
+  left: 172px;
+}
+
+.bottom-boat{
+  position: relative;
+  left: 475px;
+}
+
+.c1-p1-mtm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: start;
+  align-content: stretch;
+}
+
+.timeline-title{
+  margin: 0;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 118%;
+}
+
+.c1-p1-mtm svg{
+  align-items: end;
+}
+
+.slider{
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  justify-content: center;
+}
+
+.years{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.year{
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 118%;
+  margin: 15px 0 0 0;
+}
+
+.slider h3{
+  width: 471px;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
   line-height: 118%;
 }
