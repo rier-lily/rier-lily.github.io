@@ -1,19 +1,32 @@
 @import url(https://use.typekit.net/gkr4eyj.css);
 
-html, body {
+* {
+  box-sizing: border-box;
+}
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
+img {
+  width: 100%;
+}
+/* remove me! */
+section img {
+  background-color: #ccc;
+}
+p {
+  margin-top: 0;
+}
 section {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.lower-bg{
+.lower-bg {
   filter: brightness(75%);
   filter: contrast(115%);
 }
@@ -26,7 +39,7 @@ section {
   justify-content: center;
   align-items: center;
   filter: hue-rotate(-74deg);
-  transition: all .5s;
+  transition: all 0.5s;
   z-index: -1;
 }
 
@@ -37,7 +50,6 @@ section {
   transform: rotate(180deg);
   filter: brightness(75%);
 }
-
 
 #side1 {
   width: 300vw;
@@ -67,7 +79,7 @@ body::-webkit-scrollbar {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
 }
 
@@ -75,18 +87,17 @@ body::-webkit-scrollbar {
   display: block;
 }
 
-#title{
+#title {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-areas:
-    "title-left title-right";
+  grid-template-areas: "title-left title-right";
   grid-template-columns: 7fr 5fr;
 }
 
-.title-left{
+.title-left {
   align-self: end;
-  margin:0 0 60px 153px;
+  margin: 0 0 60px 153px;
   display: flex;
   flex-direction: column;
   height: 532px;
@@ -95,7 +106,7 @@ body::-webkit-scrollbar {
 
 #title-text {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-family: Indivisible;
   font-size: 6rem;
   font-style: normal;
@@ -104,10 +115,10 @@ body::-webkit-scrollbar {
   letter-spacing: -4.8px;
 }
 
-#start{
+#start {
   margin: 0;
   padding-top: 13px;
-  color: #FFF;
+  color: #fff;
   font-family: Indivisible;
   font-size: 2.5rem;
   font-style: normal;
@@ -115,10 +126,64 @@ body::-webkit-scrollbar {
   line-height: 112.698%;
 }
 
+.content {
+  width: 70%;
+}
+#c1-p1 .content {
+  display: flex;
+  gap: 40px;
+}
+#c1-p1 .content div {
+  flex: 1;
+}
+#c1-p1 .timeline-flex {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+#c1-p1 .timeline-flex div {
+  margin-right: -160px;
+}
+#c1-p1 .right {
+  position: relative;
+}
+.p1-map-img {
+  position: absolute;
+  height: 520px;
+  left: 20px;
+  top: 20px;
+}
+.p-flag-image {
+  position: absolute;
+  height: 120px;
+  right: 20px;
+  top: 60px;
+}
+#c1-p3 .content {
+  width: 80%;
+  display: flex;
+}
+#c1-p3 .content div {
+  flex: 1;
+}
+#c1-c3-top-img,
+#c1-c3-bottom-img {
+  height: 300px;
+}
+#c1-c3-top-img {
+  margin-top: -160px;
+  margin-right: -160px;
+  z-index: -1;
+}
+#c1-c3-bottom-img {
+  margin-top: 160px;
+  margin-left: -160px;
+  z-index: -1;
+}
+
 .drop-up {
   align-items: flex-end;
   width: fit-content;
-  color: #FFF;
+  color: #fff;
   font-family: Indivisible;
   font-size: 1.25rem;
   font-style: normal;
@@ -130,10 +195,10 @@ body::-webkit-scrollbar {
   position: relative;
   top: 20%;
   opacity: 0;
-  transition: all .25s;
+  transition: all 0.25s;
 }
 
-ul{
+ul {
   margin: 10px 0 10px 0;
 }
 
@@ -142,7 +207,7 @@ ul{
   opacity: 1;
 }
 
-.flower{
+.flower {
   width: 347.209px;
   height: 671px;
   display: block;
@@ -150,21 +215,21 @@ ul{
   margin-right: auto;
 }
 
-#c1{
+#c1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.chapter1text{
+.chapter1text {
   align-self: flex-start;
   margin: 177px 0 0 183px;
   /* justify-content: start; */
 }
 
-.chapter-number{
-  color: #FFF;
+.chapter-number {
+  color: #fff;
   font-family: Indivisible;
   font-size: 3rem;
   font-style: normal;
@@ -173,8 +238,8 @@ ul{
   margin: 0;
 }
 
-.chapter-title{
-  color: #FFF;
+.chapter-title {
+  color: #fff;
   font-family: Indivisible;
   font-size: 4.6875rem;
   font-style: normal;
@@ -184,9 +249,9 @@ ul{
   width: 1079px;
 }
 
-.vine{
+.vine {
   fill: none;
-  stroke: #fff;   
+  stroke: #fff;
   stroke-width: 1px;
   overflow: visible;
   width: 100vw;
@@ -195,8 +260,8 @@ ul{
   margin: 0 0 60px 0;
 }
 
-p{
-  color: #FFF;
+p {
+  color: #fff;
   text-align: justify;
   font-family: Indivisible;
   font-size: 2rem;
