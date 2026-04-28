@@ -277,7 +277,7 @@ p{
   line-height: 118%;
 }
 
-.slider{
+.timeline{
   display: flex;
   flex-direction: column;
   width: 580px;
@@ -304,7 +304,7 @@ p{
   margin: 15px 0 0 0;
 }
 
-.slider h3{
+.timeline h3{
   width: 471px;
   color: #FFF;
   font-family: Indivisible;
@@ -312,6 +312,10 @@ p{
   font-style: normal;
   font-weight: 600;
   line-height: 118%;
+}
+
+.boat-slider{
+  padding-bottom: 18px;
 }
 
 .c1-p1-right{
@@ -331,3 +335,44 @@ p{
   object-fit: fill;
 }
 
+/* button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  cursor: pointer;
+} */
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  max-width: 300px;
+  max-height: 300px;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.funafuti {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 10px;
+}

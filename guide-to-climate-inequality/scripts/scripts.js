@@ -94,3 +94,21 @@ function parallaxIt(e, target, movement) {
     y: (relY - $this.height() / 2) / $this.height() * movement
   });
 }
+
+const sliders = gsap.utils.toArray(".slider");
+const slidesArray = sliders.map((slider) =>
+  gsap.utils.toArray(".slide", slider)
+);
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+let currentIndex = 0;
+let isTweening = false;
+
+slidesArray.forEach((slides) => {
+  slides.forEach((slide, i) => {
+    gsap.set(slide, {
+      backgroundColor: colors[i],
+      xPercent: i > 0 && 100
+    });
+  });
+});

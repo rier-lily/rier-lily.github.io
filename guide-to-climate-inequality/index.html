@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index-style.css">
     <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/timeline.js" defer></script>
   </head>
   <body>
     <div id="container" class="bg-img">
@@ -78,16 +79,27 @@
 </svg>
           </div>
           <div class="c1-p1-right">
-            <img src="images/tuvalu-2025.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2025." class="funafuti">
+            <div class="slider slider-one">
+              <div class="funafuti">Slide 1</div>
+              <div class="funafuti">Slide 2</div>
+              <div class="funafuti">Slide 3</div>
+              <div class="funafuti">Slide 4</div>
+              <div class="funafuti">Slide 5</div>
+              <div class="funafuti">Slide 6</div>
+            </div>
+            <!-- <img src="images/tuvalu-2025.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2025." class="funafuti">
+            <img src="images/tuvalu-2050.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2050." class="funafuti">
+            <img src="images/tuvalu-2100.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2100." class="funafuti"> -->
           </div>
           <div class="c1-p1-mb">
-            <svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="prev"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M24.7803 1.76782L3.53525 23.0128L24.7803 44.2579" fill="white" fill-opacity="0.08"/>
 <path d="M24.7803 1.76782L3.53525 23.0128L24.7803 44.2579" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
-</svg>
-            <div class="slider">
-              <h3>Drag the boat to see Funafuti, the capital of Tuvalu over time</h3>
-              <svg width="53" height="49" viewBox="0 0 53 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg></button>
+            
+            <div class="timeline">
+              <h3>Click the arrows to see Funafuti, the capital of Tuvalu over time</h3>
+              <svg class="boat-slider" width="53" height="49" viewBox="0 0 53 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48.2051 32.3916L40.827 45.6492C40.5375 46.1749 40.0111 46.4999 39.4409 46.4999H13.0167C12.4553 46.4999 11.9289 46.1749 11.6306 45.6492L4.25256 32.3916H48.1963H48.2051Z" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M45.1084 12.7393L27.3344 4.01245V21.4567L45.1084 12.7393Z" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M27.334 21.1699V32.3916" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -105,11 +117,10 @@
               <h4 class="year">2100</h4>
             </div>
             </div>
-            <svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="next"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.76758 44.2578L23.0126 23.0128L1.76758 1.76777" fill="white" fill-opacity="0.08"/>
 <path d="M1.76758 44.2578L23.0126 23.0128L1.76758 1.76777" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
-</svg>
-
+</svg></button>
           </div>
         </section>
      </div>
@@ -181,5 +192,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </body>
 </html>
