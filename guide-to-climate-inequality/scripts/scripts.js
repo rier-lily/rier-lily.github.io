@@ -82,6 +82,9 @@ document.addEventListener('DOMContentLoaded', event => {
 $(window).mousemove(function(e) {
   parallaxIt(e, ".slide", -100);
   parallaxIt(e, ".lower-bg", -30);
+  parallaxIt(e, ".top-boat", -40);
+  parallaxIt(e, ".middle-boat", 30);
+  parallaxIt(e, ".bottom-boat", -20);
 });
 
 function parallaxIt(e, target, movement) {

@@ -1,43 +1,70 @@
 console.clear();
 
-// 1. Configuration & Selectors
-const colors = [
-  "#24478f",
-  "#cc0000",
-  "#663300",
-  "#006600",
-  "#cc5200",
-  "#6b00b3"
-];
+let currentState = 0;
+const totalStates = 3;
 
-// Wait for the DOM to be fully loaded before running script
+function nextState() {
+  const target = document.getElementById("boat-slider");
+  target.classList.remove(`state-${currentState}`);
+
+  currentState = (currentState + 1) % totalStates; // Cycles back to 0
+
+  target.classList.add(`state-${currentState}`);
+}
+
+function previousState() {
+  const target = document.getElementById("boat-slider");
+  target.classList.remove(`state-${currentState}`);
+
+  currentState = (currentState - 1 + totalStates) % totalStates; // Cycles back to 0
+
+  target.classList.add(`state-${currentState}`);
+}
+
+// --------------------------------------
+
+let currentPlace = 0;
+const totalPlaces = 3;
+function nextPlace() {
+  const target = document.getElementById("place");
+  target.classList.remove(`place-${currentPlace}`);
+
+  currentPlace = (currentPlace + 1) % totalPlaces; // Cycles back to 0
+
+  target.classList.add(`place-${currentPlace}`);
+}
+
+function previousPlace() {
+  const target = document.getElementById("place");
+  target.classList.remove(`place-${currentPlace}`);
+
+  currentPlace = (currentPlace - 1 + totalPlaces) % totalPlaces; // Cycles back to 0
+
+  target.classList.add(`place-${currentPlace}`);
+}
+
+// ---------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
+  const slides = gsap.utils.toArray(".funafuti");
   const sliders = gsap.utils.toArray(".slider");
   const slidesArray = sliders.map((slider) =>
     gsap.utils.toArray(".funafuti", slider)
   );
 
-  const next = document.getElementById("next");
-  const prev = document.getElementById("prev");
-  
-  let currentIndex = 0;
-  let isTweening = false;
-
-  // 2. Initial Setup: Set positions and background colors
+  // 1. Initial Setup: Hide all slides except the first one
   slidesArray.forEach((slides) => {
     slides.forEach((slide, i) => {
-      gsap.set(slide, {
-        backgroundColor: colors[i % colors.length], // Use modulo to prevent errors if colors < slides
-        xPercent: i === 0 ? 0 : 100 // Current slide at 0, others at 100
-      });
+      gsap.set(slides, { opacity: 0 });
+      gsap.set(slides[0], { opacity: 1 });
     });
   });
 
+  let currentIndex = 0;
+
+  const tl = gsap.timeline({ repeat: -1 });
+
   // 3. Navigation Logic
   const gotoSlide = (value) => {
-    if (isTweening) return;
-    isTweening = true;
-
     const first = slidesArray[0];
     const currentSlides = [];
     const nextSlides = [];
@@ -57,30 +84,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (value > 0) {
       // Moving Forward
-      gsap.set(nextSlides, { xPercent: 100 });
+      gsap.set(nextSlides, { opacity: 1 });
       gsap.to(currentSlides, {
-        xPercent: -100,
-        duration: 1,
-        ease: "power2.inOut"
+        opacity: 0
       });
     } else {
       // Moving Backward
-      gsap.set(nextSlides, { xPercent: -100 });
+      gsap.set(nextSlides, { opacity: 1 });
       gsap.to(currentSlides, {
-        xPercent: 100,
-        duration: 1,
-        ease: "power2.inOut"
+        opacity: 0
       });
     }
 
     // Animate the "next" slides to the center
     gsap.to(nextSlides, {
-      xPercent: 0,
-      duration: 1,
-      ease: "power2.inOut",
-      onComplete: () => {
-        isTweening = false;
-      }
+      opacity: 1
     });
   };
 
@@ -88,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (next) {
     next.addEventListener("click", () => gotoSlide(1));
   }
-  
+
   if (prev) {
     prev.addEventListener("click", () => gotoSlide(-1));
   }

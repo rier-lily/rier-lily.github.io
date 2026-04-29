@@ -69,10 +69,12 @@
 </svg>
           </div>
           <div class="c1-p1-mtm">
-            <h3 class="timeline-title">
-              Funafuti the Capital City of Tuvalu at High Tide in 2025
-            </h3>
-            <svg width="130" height="113" viewBox="0 0 130 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div id="place" class="place place-0">
+              <h3 class="timeline-title year-0">Funafuti the Capital City of Tuvalu at High Tide in 2025</h3>
+              <h3 class="timeline-title year-1">Funafuti the Capital City of Tuvalu at High Tide in 2050</h3>
+              <h3 class="timeline-title year-2">Funafuti the Capital City of Tuvalu at High Tide in 2100</h3>
+</div>
+            <svg class="middle-boat" width="130" height="113" viewBox="0 0 130 113" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M122.614 74.6455L103.224 106.625C102.463 107.893 101.08 108.677 99.5812 108.677H30.1362C28.6606 108.677 27.2772 107.893 26.4933 106.625L7.10314 74.6455H122.591H122.614Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M21.1035 27.2408L67.8152 6.18994V48.2686L21.1035 27.2408Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M67.7637 47.5769V74.6456" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -80,26 +82,21 @@
           </div>
           <div class="c1-p1-right">
             <div class="slider slider-one">
-              <div class="funafuti">Slide 1</div>
-              <div class="funafuti">Slide 2</div>
-              <div class="funafuti">Slide 3</div>
-              <div class="funafuti">Slide 4</div>
-              <div class="funafuti">Slide 5</div>
-              <div class="funafuti">Slide 6</div>
+              <img src="images/tuvalu-2025.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2025." class="funafuti">
+              <img src="images/tuvalu-2050.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2050." class="funafuti">
+              <img src="images/tuvalu-2100.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2100." class="funafuti">
             </div>
-            <!-- <img src="images/tuvalu-2025.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2025." class="funafuti">
-            <img src="images/tuvalu-2050.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2050." class="funafuti">
-            <img src="images/tuvalu-2100.png" alt="Funafuti the Capital City of Tuvalu at High Tide in 2100." class="funafuti"> -->
+            
           </div>
           <div class="c1-p1-mb">
-            <button id="prev"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="prev" onclick="previousState(); previousPlace();"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M24.7803 1.76782L3.53525 23.0128L24.7803 44.2579" fill="white" fill-opacity="0.08"/>
 <path d="M24.7803 1.76782L3.53525 23.0128L24.7803 44.2579" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
 </svg></button>
             
             <div class="timeline">
               <h3>Click the arrows to see Funafuti, the capital of Tuvalu over time</h3>
-              <svg class="boat-slider" width="53" height="49" viewBox="0 0 53 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg id="boat-slider" class="boat-slider state-0" width="53" height="49" viewBox="0 0 53 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48.2051 32.3916L40.827 45.6492C40.5375 46.1749 40.0111 46.4999 39.4409 46.4999H13.0167C12.4553 46.4999 11.9289 46.1749 11.6306 45.6492L4.25256 32.3916H48.1963H48.2051Z" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M45.1084 12.7393L27.3344 4.01245V21.4567L45.1084 12.7393Z" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M27.334 21.1699V32.3916" stroke="white" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -117,7 +114,7 @@
               <h4 class="year">2100</h4>
             </div>
             </div>
-            <button id="next"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="next" onclick="nextState(); nextPlace();"><svg width="27" height="47" viewBox="0 0 27 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.76758 44.2578L23.0126 23.0128L1.76758 1.76777" fill="white" fill-opacity="0.08"/>
 <path d="M1.76758 44.2578L23.0126 23.0128L1.76758 1.76777" stroke="white" stroke-width="5" stroke-miterlimit="10"/>
 </svg></button>
