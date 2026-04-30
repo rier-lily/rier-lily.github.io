@@ -41,19 +41,20 @@ document.addEventListener('DOMContentLoaded', event => {
   gsap.to(".bg-img", {
     filter: "hue-rotate(0deg)",
     scrollTrigger: {
-      trigger: "#side1",
-      start: "top top",
-      end: "#side2 top top",
+      trigger: "#title",
+      start: "bottom middle",
+      end: "#c2 bottom middle",
       scrub: true
     }
   });
+
 
   gsap.to(".bg-img", {
     filter: "hue-rotate(-74deg)",
     scrollTrigger: {
       trigger: "#c2",
-      start: "top top",
-      end: "bottom bottom",
+      start: "bottom middle",
+      end: "#c3 bottom middle",
       scrub: true
     }
   });
@@ -62,8 +63,8 @@ document.addEventListener('DOMContentLoaded', event => {
     filter: "hue-rotate(-207deg)",
     scrollTrigger: {
       trigger: "#c3",
-      start: "top top",
-      end: "bottom bottom",
+      start: "bottom middle",
+      end: "#end top top",
       scrub: true
     }
   });
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', event => {
     filter: "hue-rotate(-74deg)",
     scrollTrigger: {
       trigger: "#end",
-      start: "top top",
+      start: "middle middle",
       end: "bottom bottom",
       scrub: true
     }
@@ -81,9 +82,9 @@ document.addEventListener('DOMContentLoaded', event => {
 
 $(window).mousemove(function(e) {
   parallaxIt(e, ".slide", -100);
-  parallaxIt(e, ".lower-bg", -30);
+  parallaxIt(e, ".lower-bg", -20);
   parallaxIt(e, ".top-boat", -40);
-  parallaxIt(e, ".middle-boat", 30);
+  parallaxIt(e, ".middle-boat", -30);
   parallaxIt(e, ".bottom-boat", -20);
 });
 
@@ -115,7 +116,3 @@ slidesArray.forEach((slides) => {
     });
   });
 });
-
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
