@@ -14,8 +14,6 @@ section {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .lower-bg{
@@ -156,13 +154,16 @@ ul{
   opacity: 1;
 }
 
-.flower{
-  width: 347.209px;
-  height: 671px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.title-right{
+  grid-area: title-right;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.flower{
+  padding: 60px;
 }
 
 #c1{
@@ -235,6 +236,8 @@ p{
   grid-area: c1-p1-left;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
 
 .c1-p1-mtm {
@@ -428,11 +431,18 @@ button {
   display: grid; 
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 2fr 1fr 1fr; 
-  grid-template-rows: 2fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 0px 0px; 
   grid-template-areas: 
-    "c1-p1-left c1-p1-mtm c1-p1-right"
-    "c1-p1-left c1-p1-mb c1-p1-mb";
+    "c1-p2-left c1-p2-right"
+}
+
+.c1-p2-left{
+  grid-area: c1-p2-left;
+  height: 100vh;
+}
+
+.c1-p2-left p{
+  margin: 60px;
 }
 
