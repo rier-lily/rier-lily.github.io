@@ -439,10 +439,45 @@ button {
 
 .c1-p2-left{
   grid-area: c1-p2-left;
-  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .c1-p2-left p{
-  margin: 60px;
+  padding-left: 60px;
+  margin: auto;
 }
 
+.c1-p2-right{
+  grid-area: c1-p2-right;
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.c1-p2-right svg {
+  overflow: visible;
+  width: auto;
+  height: 80%;
+  /* transform: translateZ(0); */
+  position: absolute;
+}
+
+.boat-right {
+  stroke-width: 5px;
+  stroke: white;
+  fill: none;
+}
+
+.boat-left {
+  stroke-width: 5px;
+  stroke: white;
+  fill: none;
+}
+
+.flag{
+  overflow: hidden;
+}

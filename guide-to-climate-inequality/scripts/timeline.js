@@ -45,6 +45,44 @@ function previousPlace() {
 
 // ---------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(MotionPathPlugin);
+
+gsap.to(".boat-right", {
+  duration: 3, 
+  repeat: -1,
+  ease: "none",
+  stagger: {
+    each: 1, 
+    repeat: -1
+  },
+  motionPath: {
+    path: "#path-right",
+    align: "#path-right",
+    alignOrigin: [0.5, 0.5],
+    start: 1,
+    end: 0,
+  }
+});
+
+
+gsap.to(".boat-left", {
+  duration: 3, 
+  repeat: -1,
+  ease: "none",
+  stagger: {
+    each: 1, 
+    repeat: -1
+  },
+  motionPath: {
+    path: "#path-left",
+    align: "#path-left",
+    alignOrigin: [0.5, 0.5],
+    start: 1,
+    end: 0,
+  }
+});
+
+
   const slides = gsap.utils.toArray(".funafuti");
   const sliders = gsap.utils.toArray(".slider");
   const slidesArray = sliders.map((slider) =>
@@ -111,3 +149,5 @@ document.addEventListener("DOMContentLoaded", () => {
     prev.addEventListener("click", () => gotoSlide(-1));
   }
 });
+
+
