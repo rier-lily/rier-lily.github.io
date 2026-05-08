@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
 #title-text {
   margin: 0;
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 6rem;
   font-style: normal;
   font-weight: 700;
@@ -120,7 +120,7 @@ body::-webkit-scrollbar {
   margin: 0;
   padding-top: 13px;
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
   align-items: flex-end;
   width: fit-content;
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
@@ -180,7 +180,7 @@ ul{
 
 .chapter-number{
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
@@ -190,7 +190,7 @@ ul{
 
 .chapter-title{
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 4.6875rem;
   font-style: normal;
   font-weight: 700;
@@ -213,7 +213,7 @@ ul{
 p{
   color: #FFF;
   text-align: justify;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -285,7 +285,7 @@ p{
 .timeline-title{
   margin: 0;
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -313,7 +313,7 @@ p{
 
 .year{
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
@@ -324,7 +324,7 @@ p{
 .timeline h3{
   width: 471px;
   color: #FFF;
-  font-family: Indivisible;
+  font-family: Indivisible, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -457,7 +457,6 @@ button {
   justify-content: center;
 }
 
-
 .c1-p2-right svg {
   overflow: visible;
   width: auto;
@@ -480,4 +479,86 @@ button {
 
 .flag{
   overflow: hidden;
+}
+
+#c1-p3{
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.image-container {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 190px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.protest img{
+  width: 463px;
+  height: 263px;
+}
+
+.reclimation{
+  width: 463px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  clip-path: inset(0);
+}
+
+.protest{
+  width: 463px;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  clip-path: inset(0);
+}
+
+.reclimation img{
+  width: 463px;
+  height: 263px;
+}
+
+.protest h4{
+  margin: 0;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.698%;
+}
+
+.reclimation h4{
+  margin: 0;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.698%;
+}
+
+#c1-p3 p{
+  position: absolute;
+  width: calc(50vw - 60px);
+}
+
+.shadow{
+  padding: 1.5rem;
+  mask-image: linear-gradient(to bottom, transparent, black 1rem, black calc(100% - 1rem), transparent),
+              linear-gradient(to right, transparent, black 1rem, black calc(100% - 1rem), transparent);
+  mask-composite: intersect;
+  color: transparent;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  opacity: 0.6;
 }
