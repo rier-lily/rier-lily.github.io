@@ -488,8 +488,8 @@ button {
 }
 
 .image-container {
-  width: calc(100vw - 300px);
-  height: calc(100vh - 190px);
+  width: calc(100vw - 25rem);
+  height: calc(100vh - 20rem);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -545,7 +545,7 @@ button {
 
 #c1-p3 p{
   position: absolute;
-  width: calc(50vw - 60px);
+  width: calc(50vw - 12.5rem);
 }
 
 .shadow{
