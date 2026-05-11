@@ -1,42 +1,84 @@
 document.addEventListener('DOMContentLoaded', event => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections1 = gsap.utils.toArray('#side1 section');
-  const sections2 = gsap.utils.toArray('#side2 section');
-  const sections3 = gsap.utils.toArray('#side3 section');
+  const container1 = document.querySelector('#side1');
+  const container2 = document.querySelector('#side2');
+  const container3 = document.querySelector('#side3');
+  // const sections1 = gsap.utils.toArray('#side1 section');
+  // const sections2 = gsap.utils.toArray('#side2 section');
+  // const sections3 = gsap.utils.toArray('#side3 section');
 
-  const scroll1 = gsap.to(sections1, {
-    xPercent: -100 * (sections1.length - 1),
+const scroll1 = gsap.to(container1, {
+    x: () => -(container1.scrollWidth - window.innerWidth), 
     ease: 'none',
     scrollTrigger: {
       trigger: '#side1',
       pin: true,
       scrub: 0,
+      // invalidateOnRefresh ensures the math updates if the window is resized
+      invalidateOnRefresh: true, 
       end: '+=3000',
     },
-  });
+});
 
-  gsap.to(sections2, {
-    xPercent: -100 * (sections2.length - 1),
+const scroll2 = gsap.to(container2, {
+    x: () => -(container2.scrollWidth - window.innerWidth), 
     ease: 'none',
     scrollTrigger: {
       trigger: '#side2',
       pin: true,
       scrub: 0,
+      // invalidateOnRefresh ensures the math updates if the window is resized
+      invalidateOnRefresh: true, 
       end: '+=3000',
     },
-  });
+});
 
-  const scroll3 = gsap.to(sections3, {
-    xPercent: -100 * (sections3.length - 1),
+const scroll3 = gsap.to(container3, {
+    x: () => -(container3.scrollWidth - window.innerWidth), 
     ease: 'none',
     scrollTrigger: {
       trigger: '#side3',
       pin: true,
       scrub: 0,
+      // invalidateOnRefresh ensures the math updates if the window is resized
+      invalidateOnRefresh: true, 
       end: '+=3000',
     },
-  });
+});
+
+  // const scroll1 = gsap.to(sections1, {
+  //   xPercent: -100 * (sections1.length - 1),
+  //   ease: 'none',
+  //   scrollTrigger: {
+  //     trigger: '#side1',
+  //     pin: true,
+  //     scrub: 0,
+  //     end: '+=3000',
+  //   },
+  // });
+
+  // gsap.to(sections2, {
+  //   xPercent: -100 * (sections2.length - 1),
+  //   ease: 'none',
+  //   scrollTrigger: {
+  //     trigger: '#side2',
+  //     pin: true,
+  //     scrub: 0,
+  //     end: '+=3000',
+  //   },
+  // });
+
+  // const scroll3 = gsap.to(sections3, {
+  //   xPercent: -100 * (sections3.length - 1),
+  //   ease: 'none',
+  //   scrollTrigger: {
+  //     trigger: '#side3',
+  //     pin: true,
+  //     scrub: 0,
+  //     end: '+=3000',
+  //   },
+  // });
 
   gsap.to(".bg-img", {
     filter: "hue-rotate(0deg)",
@@ -44,10 +86,9 @@ document.addEventListener('DOMContentLoaded', event => {
       trigger: "#title",
       start: "bottom middle",
       end: "#c2 bottom middle",
-      scrub: true
+      scrub: true,
     }
   });
-
 
   gsap.to(".bg-img", {
     filter: "hue-rotate(-74deg)",
