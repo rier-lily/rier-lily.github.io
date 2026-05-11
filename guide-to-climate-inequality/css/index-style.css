@@ -493,6 +493,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
 .protest img{
@@ -565,6 +566,7 @@ a img {
   height: calc(100vh - 190px);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .kiribati1 img{
@@ -643,5 +645,6 @@ a img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: auto;
   opacity: 0.6;
 }
