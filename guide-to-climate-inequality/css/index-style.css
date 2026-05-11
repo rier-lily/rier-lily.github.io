@@ -548,6 +548,75 @@ button {
   width: calc(50vw - 12.5rem);
 }
 
+a img { 
+  vertical-align: bottom;
+}
+
+#c2-p1{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.image-container2 {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 190px);
+  display: flex;
+  flex-direction: column;
+}
+
+.kiribati1 img{
+  width: 463px;
+  height: 263px;
+}
+
+.kiribati2{
+  width: 463px;
+  margin-top: auto;
+  clip-path: inset(0);
+}
+
+.kiribati1{
+  width: 463px;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  clip-path: inset(0);
+}
+
+.kiribati2 img{
+  width: 463px;
+  height: 263px;
+}
+
+.kiribati1 h4{
+  margin: 0;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.698%;
+}
+
+.kiribati2 h4{
+  margin: 0;
+  color: #FFF;
+  font-family: Indivisible;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.698%;
+}
+
+#c2-p1 p{
+  position: absolute;
+  width: 640px;
+}
+
 .shadow{
   padding: 1.5rem;
   mask-image: linear-gradient(to bottom, transparent, black 1rem, black calc(100% - 1rem), transparent),
@@ -563,6 +632,17 @@ button {
   opacity: 0.6;
 }
 
-a img { 
-  vertical-align: bottom;
+.shadow2{
+  padding: 1.5rem;
+  mask-image: linear-gradient(to bottom, transparent, black 1rem, black calc(100% - 1rem), transparent),
+              linear-gradient(to right, transparent, black 1rem, black calc(100% - 1rem), transparent);
+  mask-composite: intersect;
+  color: transparent;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  opacity: 0.6;
 }
