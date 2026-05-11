@@ -562,3 +562,7 @@ button {
   margin: auto;
   opacity: 0.6;
 }
+
+a img { 
+  vertical-align: bottom;
+}
