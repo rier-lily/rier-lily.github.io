@@ -80,12 +80,13 @@ const scroll3 = gsap.to(container3, {
   //   },
   // });
 
+
   gsap.to(".bg-img", {
     filter: "hue-rotate(0deg)",
     scrollTrigger: {
       trigger: "#title",
       start: "bottom middle",
-      end: "#c2 bottom middle",
+      end: "bottom middle",
       scrub: true,
     }
   });
@@ -95,7 +96,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#c2",
       start: "bottom middle",
-      end: "#c3 bottom middle",
+      end: "bottom middle",
       scrub: true
     }
   });
@@ -105,7 +106,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#c3",
       start: "bottom middle",
-      end: "#end top top",
+      end: "bottom middle",
       scrub: true
     }
   });
