@@ -86,7 +86,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#title",
       start: "bottom middle",
-      end: "bottom middle",
+      end: "#c2 bottom middle",
       scrub: true,
     }
   });
@@ -96,7 +96,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#c2",
       start: "bottom middle",
-      end: "bottom middle",
+      end: "#c3 bottom middle",
       scrub: true
     }
   });
@@ -106,7 +106,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#c3",
       start: "bottom middle",
-      end: "bottom middle",
+      end: "#end bottom middle",
       scrub: true
     }
   });
@@ -116,7 +116,7 @@ const scroll3 = gsap.to(container3, {
     scrollTrigger: {
       trigger: "#end",
       start: "middle middle",
-      end: "bottom bottom",
+      end: "middle middle",
       scrub: true
     }
   });
