@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', event => {
   const container1 = document.querySelector('#side1');
   const container2 = document.querySelector('#side2');
   const container3 = document.querySelector('#side3');
-  // const sections1 = gsap.utils.toArray('#side1 section');
-  // const sections2 = gsap.utils.toArray('#side2 section');
-  // const sections3 = gsap.utils.toArray('#side3 section');
 
 const scroll1 = gsap.to(container1, {
     x: () => -(container1.scrollWidth - window.innerWidth), 
