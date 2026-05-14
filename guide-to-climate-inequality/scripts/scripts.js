@@ -46,80 +46,6 @@ const scroll3 = gsap.to(container3, {
       end: '+=3000',
     },
 });
-
-  // const scroll1 = gsap.to(sections1, {
-  //   xPercent: -100 * (sections1.length - 1),
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '#side1',
-  //     pin: true,
-  //     scrub: 0,
-  //     end: '+=3000',
-  //   },
-  // });
-
-  // gsap.to(sections2, {
-  //   xPercent: -100 * (sections2.length - 1),
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '#side2',
-  //     pin: true,
-  //     scrub: 0,
-  //     end: '+=3000',
-  //   },
-  // });
-
-  // const scroll3 = gsap.to(sections3, {
-  //   xPercent: -100 * (sections3.length - 1),
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '#side3',
-  //     pin: true,
-  //     scrub: 0,
-  //     end: '+=3000',
-  //   },
-  // });
-
-
-  gsap.to(".bg-img", {
-    filter: "hue-rotate(0deg)",
-    scrollTrigger: {
-      trigger: "#title",
-      start: "bottom middle",
-      end: "#c2 bottom middle",
-      scrub: true,
-    }
-  });
-
-  gsap.to(".bg-img", {
-    filter: "hue-rotate(-74deg)",
-    scrollTrigger: {
-      trigger: "#c2",
-      start: "bottom middle",
-      end: "#c3 bottom middle",
-      scrub: true
-    }
-  });
-
-  gsap.to(".bg-img", {
-    filter: "hue-rotate(-207deg)",
-    scrollTrigger: {
-      trigger: "#c3",
-      start: "bottom middle",
-      end: "#end bottom middle",
-      scrub: true
-    }
-  });
-
-  gsap.to(".bg-img", {
-    filter: "hue-rotate(-74deg)",
-    scrollTrigger: {
-      trigger: "#end",
-      start: "middle middle",
-      end: "middle middle",
-      scrub: true
-    }
-  });
 });
 
 $(window).mousemove(function(e) {
@@ -159,3 +85,25 @@ slidesArray.forEach((slides) => {
   });
 });
 
+window.addEventListener("scroll", () => {
+  const vh = window.innerHeight;
+  const scrollY = window.scrollY;
+  let hueValue = -74;
+
+  if (scrollY >= vh) {
+    hueValue = -0;
+  } 
+  if (scrollY >= vh * 6) {
+    hueValue = -74;
+  }
+  
+  if (scrollY >= vh * 14.5) {
+    hueValue = -207;
+  }
+  
+  if (scrollY >= vh * 19.5) {
+    hueValue = -74;
+  }
+
+  document.documentElement.style.setProperty("--hue-rotate", `${hueValue}deg`);
+});
