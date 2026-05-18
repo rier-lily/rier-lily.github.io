@@ -64,23 +64,23 @@ function parallaxIt(e, target, movement) {
   });
 }
 
-const sliders = gsap.utils.toArray(".slider");
-const slidesArray = sliders.map((slider) =>
-  gsap.utils.toArray(".slide", slider)
-);
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-let currentIndex = 0;
-let isTweening = false;
+// const sliders = gsap.utils.toArray(".slider");
+// const slidesArray = sliders.map((slider) =>
+//   gsap.utils.toArray(".slide", slider)
+// );
+// const next = document.getElementById("next");
+// const prev = document.getElementById("prev");
+// let currentIndex = 0;
+// let isTweening = false;
 
-slidesArray.forEach((slides) => {
-  slides.forEach((slide, i) => {
-    gsap.set(slide, {
-      backgroundColor: colors[i],
-      xPercent: i > 0 && 100
-    });
-  });
-});
+// slidesArray.forEach((slides) => {
+//   slides.forEach((slide, i) => {
+//     gsap.set(slide, {
+//       backgroundColor: colors[i],
+//       xPercent: i > 0 && 100
+//     });
+//   });
+// });
 
 window.addEventListener("scroll", () => {
   const vh = window.innerHeight;
@@ -94,11 +94,11 @@ window.addEventListener("scroll", () => {
     hueValue = -74;
   }
   
-  if (scrollY >= vh * 14.5) {
+  if (scrollY >= vh * 16) {
     hueValue = -207;
   }
   
-  if (scrollY >= vh * 19.5) {
+  if (scrollY >= vh * 21) {
     hueValue = -74;
   }
 
