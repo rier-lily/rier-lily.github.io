@@ -82,26 +82,54 @@ function parallaxIt(e, target, movement) {
 //   });
 // });
 
+// window.addEventListener("scroll", () => {
+//   const vh = window.innerHeight;
+//   const scrollY = window.scrollY;
+//   let hueValue = -74;
+
+//   if (scrollY >= vh) {
+//     hueValue = -0;
+//   } 
+//   if (scrollY >= vh * 7) {
+//     hueValue = -74;
+//   }
+  
+//   if (scrollY >= vh * 16) {
+//     hueValue = -207;
+//   }
+  
+//   if (scrollY >= vh * 21) {
+//     hueValue = -74;
+//   }
+
+//   document.documentElement.style.setProperty("--hue-rotate", `${hueValue}deg`);
+// });
+
+
 window.addEventListener("scroll", () => {
-  const vh = window.innerHeight;
-  const scrollY = window.scrollY;
+  // Total scrollable height = Entire Document Height - Viewport Height
+  const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+  
+  // Guard against division by zero if the page isn't scrollable
+  if (totalScrollable <= 0) return;
+
+  // Percentage scrolled (0 to 1)
+  const scrollPercent = window.scrollY / totalScrollable;
   let hueValue = -74;
 
-  if (scrollY >= vh) {
-    hueValue = -0;
+  // Define triggers based on total page progress (e.g., 10%, 40%, 75%)
+  if (scrollPercent >= 0.0625) {
+    hueValue = 0;
   } 
-  if (scrollY >= vh * 7) {
+  if (scrollPercent >= 0.375) {
     hueValue = -74;
   }
-  
-  if (scrollY >= vh * 16) {
+  if (scrollPercent >= 0.75) {
     hueValue = -207;
   }
-  
-  if (scrollY >= vh * 21) {
+  if (scrollPercent >= 1) {
     hueValue = -74;
   }
 
   document.documentElement.style.setProperty("--hue-rotate", `${hueValue}deg`);
 });
-
