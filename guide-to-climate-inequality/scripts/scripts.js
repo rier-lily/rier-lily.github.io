@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
   if (scrollY >= vh) {
     hueValue = -0;
   } 
-  if (scrollY >= vh * 6) {
+  if (scrollY >= vh * 7) {
     hueValue = -74;
   }
   
@@ -104,3 +104,4 @@ window.addEventListener("scroll", () => {
 
   document.documentElement.style.setProperty("--hue-rotate", `${hueValue}deg`);
 });
+
