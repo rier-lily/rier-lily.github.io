@@ -5,8 +5,6 @@
 }
 
 * {
-  outline: 2px solid blue !important;
-  outline-offset: -2px;
   margin: 0;
   padding: 0;
 }
@@ -71,21 +69,20 @@ section {
 #side1 {
   width: 300vw;
   display: flex;
-  outline: 10px solid red !important;
   outline-offset: -2px;
+  flex-wrap: nowrap;
+  height: 100vh;
 }
 
 #side2 {
   width: 200vw;
   display: flex;
-  outline: 10px solid red !important;
   outline-offset: -2px;
 }
 
 #side3 {
   width: 300vw;
   display: flex;
-  outline: 10px solid red !important;
   outline-offset: -2px;
 }
 
@@ -336,6 +333,7 @@ p{
 }
 
 .timeline h3{
+  /* padding-bottom: .8rem; */
   width: 471px;
   color: #FFF;
   font-family: Indivisible, sans-serif;
@@ -347,7 +345,7 @@ p{
 }
 
 .boat-slider{
-  padding-bottom: 18px;
+  padding: 1rem 0 1rem 0;
   transition: all 0.5s ease-out;
 }
 
