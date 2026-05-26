@@ -660,3 +660,69 @@ a img {
   margin: auto;
   opacity: 0.6;
 }
+
+.globe-div{
+  position: absolute;
+  height: 300vh;
+  width: 100vw;
+}
+
+figure{
+  position: sticky;
+  top: 200vh;
+  inset-block-start: 60px;
+  width: 300px;
+  z-index: 100;
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-left: auto;
+  margin-bottom: calc(100vh - 360px)
+}
+
+.globe-element {
+  fill: #606060;
+  stroke-width: 1.15px;
+  stroke: #010101;
+  transition: all 2s;
+  }
+
+.water{
+  fill: #010101;
+}
+
+.globe-shadow{
+  fill: url(#myGradient);
+  opacity: 24%;
+}
+
+.spin-0 {
+  transform: translateX(100px);
+}
+
+.spin-0#FJ {
+    fill: red;
+    stroke: red;
+    stroke-width: 4px;
+}
+
+.spin-1 {
+  transform: translateX(-180px);
+}
+
+.spin-1#TD {
+  fill: red;
+}
+
+.spin-2 {
+  transform: translateX(-350px);
+}
+
+.spin-2#ID {
+    fill: red;
+  stroke: none;
+}
+
+.spin-2#VN {
+    fill: red;
+  stroke: none;
+}

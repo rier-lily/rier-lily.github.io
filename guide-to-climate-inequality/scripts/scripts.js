@@ -133,3 +133,59 @@ window.addEventListener("scroll", () => {
 
   document.documentElement.style.setProperty("--hue-rotate", `${hueValue}deg`);
 });
+
+
+{
+  const spinSectionOne = document.querySelector('#c2-p2'); 
+  const mainDivs = document.querySelectorAll('.globe-element');
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      const ratio = entry.intersectionRatio;
+      mainDivs.forEach(div => {
+        if (entry.isIntersecting && ratio >= 0.8) {
+          div.classList.add('spin-1');
+          div.classList.remove('spin-0');
+          div.classList.remove('spin-2');
+        } else if (ratio <= 0.2) {
+          div.classList.remove('spin-1');
+          div.classList.add('spin-0');
+        }
+      });
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, { threshold: [0.2, 0.8] });
+
+  if (spinSectionOne) {
+    observer.observe(spinSectionOne);
+  }
+}
+
+{
+  const spinSectionTwo = document.querySelector('#c2-p3'); 
+  const mainDivs = document.querySelectorAll('.globe-element');
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      const ratio = entry.intersectionRatio;
+      mainDivs.forEach(div => {
+        if (entry.isIntersecting && ratio >= 0.8) {
+          div.classList.add('spin-2');
+          div.classList.remove('spin-1');
+          div.classList.remove('spin-0');
+        } else if (ratio <= 0.2) {
+          div.classList.remove('spin-2');
+        }
+      });
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, { 
+    threshold: [0.2, 0.8] 
+  });
+
+  if (spinSectionTwo) {
+    observer.observe(spinSectionTwo);
+  }
+}
