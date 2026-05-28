@@ -189,3 +189,92 @@ window.addEventListener("scroll", () => {
     observer.observe(spinSectionTwo);
   }
 }
+
+const remToPx = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+window.chartColors = {
+  red: 'rgb(255, 99, 132)',
+  orange: 'rgb(255, 159, 64)',
+  yellow: 'rgb(255, 205, 86)',
+  green: 'rgb(75, 192, 192)',
+  blue: 'rgb(54, 162, 235)',
+  purple: 'rgb(153, 102, 255)',
+  grey: 'rgb(231,233,237)'
+};
+
+var YEARS = ["1990", "1991", "1992", "1992", "1994", "1995", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+var config = {
+  type: 'line',
+  data: {
+    labels: YEARS,
+    datasets: [{
+      label: "Low Income Countries",
+      backgroundColor: window.chartColors.red,
+      borderColor: window.chartColors.red,
+     data: [2.4, 2.4, 2.3, 2.2, 2.1, 2.1, 2.1, 2.2, 2.2, 2.2, 1.9, 1.8, 1.6, 1.7, 1.9, 2.3, 2.7, 2.7, 2.5, 2.3, 2.4, 2.5, 2.7, 2.9, 2.9, 3, 2.9, 2.9, 3.2, 3.3, 3.2, 3.3, 3.4, 3.5],
+      fill: false,
+    }, {
+      label: "Low-middle Income Countries",
+      backgroundColor: window.chartColors.green,
+      borderColor: window.chartColors.green,
+     data: [9.1, 9.1, 9.0, 9.2, 9.3, 9.8, 9.8, 10.3, 10.6, 11.2, 10.8, 10.8, 10.6, 11.4, 11.4, 11.6, 12, 13.1, 13.1, 12.1, 11.9, 12.4, 12.8, 13.4, 13.4, 13.6,13.9, 14.2, 14.4, 14.5, 13.1, 12.9, 15.2, 15.8],
+      fill: false,
+    }, {
+      label: "Upper-middle Income Countries",
+      fill: false,
+      backgroundColor: window.chartColors.blue,
+      borderColor: window.chartColors.blue,
+      data: [6.8, 6.7, 6.9, 7.0, 7.2, 7.4, 7.5, 7.8, 7.8, 8.2, 8.1, 8.3, 8.3, 8.8, 9.2, 9.0, 9.1, 9.0, 9.0, 8.0, 7.5, 6.7, 5.8, 5, 4.5, 4.5, 4.8, 4.8, 4.0, 3.8, 3.3, 3.3, 3.5, 3.4],
+    }, {
+      label: "High Income Countries",
+      fill: false,
+      backgroundColor: window.chartColors.orange,
+      borderColor: window.chartColors.orange,
+      data: [2.0, 2.0, 1.9, 2.0, 2.0, 2.1, 2.0, 2.0, 2.0, 2.1, 2.0, 1.9, 2.0, 2.0, 1.9, 1.9, 1.8, 1.8, 1.7, 1.6, 1.6, 1.6, 1.6, 1.6, 1.5, 1.5, 1.4, 1.3, 1.4, 1.3, 1.2, 1.2, 1.2, 1.2],
+    }]
+  },
+  options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  title: {
+    display: true,
+    text: 'Estimated annual number of deaths attributed to ozone pollution per 100,000 people.',
+    fontFamily: "'Indivisible', sans-serif",
+    fontSize: remToPx(1.2),
+  },
+  tooltips: {
+      mode: 'index',
+      intersect: false,
+  }, 
+  scales: {
+    xAxes: [{
+      display: true,
+      scaleLabel: {
+        display: true,
+        labelString: 'Year',
+        fontFamily: "'Indivisible', sans-serif",
+        fontSize: remToPx(1.2),
+      },
+      ticks: {
+        fontFamily: "'Indivisible', sans-serif",
+        fontSize: remToPx(.8),
+      }
+    }],
+    yAxes: [{
+      display: true,
+      scaleLabel: {
+        display: true,
+        labelString: 'Estimated annual deaths per 100,000',
+        fontFamily: "'Indivisible', san-serif",
+        fontSize: remToPx(1.2),
+      },
+      ticks: {
+        fontFamily: "'Indivisible', sans-serif",
+        fontSize: remToPx(.8),
+      }
+    }]
+  }
+}
+};
+
+var ctx = document.getElementById("ozone-chart").getContext("2d");
+var myLine = new Chart(ctx, config);
