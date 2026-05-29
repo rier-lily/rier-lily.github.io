@@ -574,7 +574,7 @@ a img {
 }
 
 .image-container2 {
-  width: calc(100vw - 500px);
+  width: calc(100vw - 300px);
   height: calc(100vh - 190px);
   display: flex;
   flex-direction: column;
@@ -583,18 +583,18 @@ a img {
 
 .kiribati1 img{
   object-fit: cover;
-  width: 500px;
-  height: 300px;
+  width: 31rem;
+  height: 33cqh;
 }
 
 .kiribati2{
-  width: 500px;
+  width: 31rem;
   margin-top: auto;
   clip-path: inset(0);
 }
 
 .kiribati1{
-  width: 500px;
+  width: 31rem;
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
@@ -604,8 +604,8 @@ a img {
 
 .kiribati2 img{
   object-fit: cover;
-  width: 500px;
-  height: 300px;
+  width: 31rem;
+  height: 33cqh;
 }
 
 .kiribati1 h4{
@@ -673,7 +673,7 @@ figure{
   position: sticky;
   top: 200vh;
   inset-block-start: 60px;
-  width: 300px;
+  width: 200px;
   z-index: 100;
   margin-top: 60px;
   margin-right: 60px;
@@ -731,7 +731,7 @@ figure{
 
 #c2-p2 p{
   position: absolute;
-  width: 640px;
+  width: 45rem;
 }
 
 #c2-p2{
@@ -743,20 +743,22 @@ figure{
 }
 
 .c2-p3{
-  padding-right:
+  padding-right: 230px;
+  margin: 60px 60px 60px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .ozone-div{
-  /* margin-top: calc(60px + 1rem);
-  margin-left: calc(60px + 1rem);
-  height: calc(66.6% - 60px - 1rem);
-  width: calc(42% - 30px - .5rem); */
+  width: calc(50% - 1rem);
+  margin-bottom: 20%;
   background-color: white;
   box-shadow: 0 0 1rem 20px rgba(255, 255, 255, 1);
 }
 
 #c2-p3 p{
-  /* margin-top: 60px;
-  margin-bottom: 60px;
-  width: calc(42% - 30px - .5rem); */
+  width: calc(50% - 1rem);
+  align-self: bottom;
+  margin-top: auto;
 }
