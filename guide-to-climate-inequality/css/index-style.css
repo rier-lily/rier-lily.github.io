@@ -762,3 +762,15 @@ figure{
   align-self: bottom;
   margin-top: auto;
 }
+
+#c2-p5 p{
+  width: 45rem;
+  margin: auto;
+}
+
+#c3{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
