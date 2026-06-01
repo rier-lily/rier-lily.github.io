@@ -119,7 +119,7 @@ body::-webkit-scrollbar {
 #title-text {
   margin: 0;
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 6rem;
   font-style: normal;
   font-weight: 700;
@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
   margin: 0;
   padding-top: 13px;
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
   align-items: flex-end;
   width: fit-content;
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
@@ -191,7 +191,7 @@ ul{
 
 .chapter-number{
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
@@ -201,7 +201,7 @@ ul{
 
 .chapter-title{
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 4.6875rem;
   font-style: normal;
   font-weight: 700;
@@ -224,7 +224,7 @@ ul{
 p{
   color: #FFF;
   text-align: justify;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -296,7 +296,7 @@ p{
 .timeline-title{
   margin: 0;
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -324,7 +324,7 @@ p{
 
 .year{
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
@@ -336,7 +336,7 @@ p{
   /* padding-bottom: .8rem; */
   width: 471px;
   color: #FFF;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -702,8 +702,8 @@ figure{
 }
 
 .spin-0#FJ {
-    fill: red;
-    stroke: red;
+    fill: #a71e32;
+    stroke: #a71e32;
     stroke-width: 4px;
 }
 
@@ -712,7 +712,7 @@ figure{
 }
 
 .spin-1#TD {
-  fill: red;
+  fill: #a71e32;
 }
 
 .spin-2 {
@@ -720,13 +720,19 @@ figure{
 }
 
 .spin-2#ID {
-    fill: red;
+    fill: #a71e32;
+}
+
+#ID {
+  stroke: none;
+}
+
+#VN {
   stroke: none;
 }
 
 .spin-2#VN {
-    fill: red;
-  stroke: none;
+    fill: #a71e32;
 }
 
 #c2-p2 p{
@@ -837,7 +843,7 @@ figure{
 }
 
 .percent{
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   color: white;
@@ -882,7 +888,7 @@ figure{
   font-weight: 500;
   font-size: 1.5rem;
   color: #3a413e;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
 }
 
 .key{
@@ -905,14 +911,14 @@ figure{
   font-weight: 500;
   font-size: 1.5rem;
   color: #3a413e;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
 }
 
 .co2-share-title{
   font-weight: 700;
   font-size: 1.5rem;
   color: #3a413e;
-  font-family: Indivisible, sans-serif;
+  font-family: 'Indivisible', sans-serif;
 }
 
 #c3-p1{
@@ -929,4 +935,119 @@ figure{
 #c3-p1 p{
   width: 40%;
   margin-left: 60px;
+}
+
+#c3-p2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  gap: 0px;
+}
+
+p{
+  color: #FFF;
+  text-align: justify;
+  font-family: 'Indivisible', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118%;
+}
+
+#c3-p2 p{
+  width: 50%;
+  margin-left: 60px;
+}
+
+.articles{
+  width: 35%;
+  height: calc(100% - 120px);
+  margin-right: calc(60px + 1rem);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  gap: 0px;
+}
+
+.article{
+  box-shadow: 0 0 1rem 20px rgba(255, 255, 255, 1);
+  width: 100%;
+  height: calc(50% - 2rem - 30px);
+  padding-bottom: 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.article-img-container{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 60%;
+  max-height: 60%;
+}
+
+.article-img{
+  border-radius: 16px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: 20% 80%;
+}
+
+.article-title{
+  width: 100%;
+  color: #3a413e;
+  text-align: justify;
+  font-family: 'Indivisible', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 118%;
+}
+
+.article-summary{
+  width: 100%;
+  color: #3a413e;
+  text-align: justify;
+  font-family: 'Indivisible', sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118%;
+}
+
+.archive-link{
+  width: 100%;
+  color: #3a413e;
+  text-align: justify;
+  font-family: 'Indivisible', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.article-text, .article-text:link, .article-text:active{
+  text-decoration: none;
+  margin: 1rem 0 0 0;
+}
+
+.article-text:hover{
+  text-decoration: underline;
+}
+
+.archive-link, .archive-link:link, .archive-link:active{
+  text-decoration: none;
+}
+
+.archive-link:hover{
+  text-decoration: underline;
 }
