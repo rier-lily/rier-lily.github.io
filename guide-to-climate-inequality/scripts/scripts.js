@@ -127,7 +127,7 @@ window.addEventListener("scroll", () => {
   if (scrollPercent >= 0.74) {
     hueValue = -207;
   }
-  if (scrollPercent >= 1) {
+  if (scrollPercent >= .97) {
     hueValue = -74;
   }
 
